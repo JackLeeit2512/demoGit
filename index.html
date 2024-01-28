@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+    <title>Door Control</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+    <script src="function.js"></script>
+    
+</head>
+<body>
+    
+    <div class="swBox">
+        <div class="door sw">
+            <h2>DOOR SWITCH</h2>
+            <button onclick = "doorOpen()" id="dOpen">ON</button>
+            <button onclick = "doorClose()" id="dClose">OFF</button>
+            <p id="doorStatus">Off</p>
+        </div>
+
+        <div class="light sw">
+            <h2>LIGHT SWITCH</h2>
+            <button onclick = "Bright()" id="bright">ON</button>
+            <button onclick = "Dark()" id="dark">OFF</button>
+            <p id="lightStatus">Off</p>
+        </div>
+
+        <div class="window sw">
+            <h2>WINDOW SWITCH</h2>
+            <button onclick = "windowOpen()" id="wOpen">ON</button>
+            <button onclick = "windowClose()" id="wClose">OFF</button>
+            <p id="windowStatus">Off</p>
+        </div>
+
+        <div class="fan sw">
+            <h2>FAN SWITCH</h2>
+            <button onclick = "fanOn()" id="fanOn">ON</button>
+            <button onclick = "fanOff()" id="fanOff">OFF</button>
+            <p id="fanStatus">Off</p>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="lcd">
+        <p>Humidity: </p> 
+        <p id="hum" >a</p> 
+        <p> %</p>
+        <br><br>
+        <p>Temperature: </p>
+        <span id="tem">b</span> 
+        <p> Celsius</p>
+    </div>
+</body>
